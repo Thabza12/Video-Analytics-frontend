@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <h2>Video Results</h2>
+    <br>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Picked Product</th>
+                <th>Total Cases</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let videoResult of videoResults">
+                <td>{{videoResult.pickedProduct}}</td>
+                <td>{{videoResult.totalCases}}</td>
+                <td>
+                    <button (click) = "updateVideoResults(videoResult.id)" type="button" class="btn btn-outline-primary me-2">Edit</button>
+                    <button (click) = "deleteVideoResults(videoResult.id)" type="button" class="btn btn-outline-danger">Delete</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

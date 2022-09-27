@@ -1,0 +1,31 @@
+<div class="class container">
+    <form (ngSubmit)="onSubmit()">
+        <br>
+        <h1>Update Videos Form</h1>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="video.videoFile" placeholder="Video File"
+                    name="Video File">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="recordDate" class="form-label">Record Date:</label>
+                <input type="date" class="form-control" [(ngModel)]="video.recordDate" id="recordDate"
+                    name="recordDate">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="startTime" class="form-label">Start Time:</label>
+                <input type="time" class="form-control" [(ngModel)]="video.startTime" id="startTime" name="startTime">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="endTime" class="form-label">End Time:</label>
+                <input type="time" class="form-control" [(ngModel)]="video.endTime" id="endTime" name="endTime">
+            </div>
+        </div>
+        <br>
+
+        <button type="submit[disabled]" class="btn btn-success" (click)="onSubmit()">Submit</button>
+
+
+    </form>
+</div>

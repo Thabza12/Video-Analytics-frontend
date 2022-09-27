@@ -1,0 +1,43 @@
+<div class="class container">
+    <form (ngSubmit)="onSubmit()">
+        <br>
+        <br>
+        <br>
+        <h1>Update PickSheet Details Form</h1>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheetDetails.zone" placeholder="Zone"
+                    name="Zone">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheetDetails.pack" placeholder="Pack"
+                    name="Pack">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheetDetails.flavour" placeholder="Flavour"
+                    name="Flavour">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheetDetails.hands" placeholder="Hands"
+                    name="Hands">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheetDetails.layers" placeholder="Layers"
+                    name="Layers">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheetDetails.totalCases"
+                    placeholder="Total Cases" name="Total Cases">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheetDetails.sku" placeholder="SKU" name="sku">
+            </div>
+        </div>
+        <br>
+
+        <button type="submit[disabled]" class="btn btn-success" (click)="onSubmit()">Submit</button>
+
+
+    </form>
+</div>

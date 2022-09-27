@@ -1,0 +1,35 @@
+<div class="container mt-3">
+    <h2>PickSheet Details</h2>
+    <br>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Zone</th>
+                <th>Pack</th>
+                <th>Flavour</th>
+                <th>Hands</th>
+                <th>Layers</th>
+                <th>Total Cases</th>
+                <th>SKU</th>
+                <th>Actions</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let details of pickSheetDetails">
+                <td>{{details.zone}}</td>
+                <td>{{details.pack}}</td>
+                <td>{{details.flavour}}</td>
+                <td>{{details.hands}}</td>
+                <td>{{details.layers}}</td>
+                <td>{{details.totalCases}}</td>
+                <td>{{details.sku}}</td>
+                <td>
+                    <button (click) = "updatePickSheetDetails(details.id)" type="button" class="btn btn-outline-primary me-2">Edit</button>
+                    <button (click) = "deletePickSheetDetails(details.id)" type="button" class="btn btn-outline-danger">Delete</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

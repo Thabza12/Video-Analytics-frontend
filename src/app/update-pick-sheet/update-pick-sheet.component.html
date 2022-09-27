@@ -1,0 +1,48 @@
+<div class="class container">
+    <form (ngSubmit)="onSubmit()">
+        <br>
+        <br>
+        <br>
+        <h1>Update Pick Sheet Form</h1>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheet.pickSheetNumber"
+                    placeholder="PickSheet Number" name="PickSheet Number">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheet.shipmentNumber"
+                    placeholder="Shipment Number" name="Shipment Number">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="pickSheetDate" class="form-label">PickSheet Date:</label>
+                <input type="date" class="form-control" [(ngModel)]="pickSheet.pickSheetDate" id="pickSheetDate"
+                    name="pickSheetDate">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="deliveryDate" class="form-label">Delivery Date:</label>
+                <input type="date" class="form-control" [(ngModel)]="pickSheet.deliveryDate" id="deliveryDate"
+                    name="deliveryDate">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheet.routeID" placeholder="RouteID"
+                    name="RouteID">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheet.bay" placeholder="Bay" name="Bay">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheet.bin" placeholder="Bin" name="Bin">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="pickSheet.quantity" placeholder="Quantity"
+                    name="Quantity">
+            </div>
+        </div>
+        <br>
+
+        <button type="submit[disabled]" class="btn btn-success" (click)="onSubmit()">Submit</button>
+
+
+    </form>
+</div>

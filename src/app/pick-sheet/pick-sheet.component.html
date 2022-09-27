@@ -1,0 +1,36 @@
+<div class="container mt-3">
+    <h2>Pick Sheets</h2>
+    <br>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>PickSheet Number</th>
+                <th>Shipment Number</th>
+                <th>PickSheet Date</th>
+                <th>Delivery Date</th>
+                <th>RouteID</th>
+                <th>Bay</th>
+                <th>Bin</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let pickSheet of pickSheets">
+                <td>{{pickSheet.pickSheetNumber}}</td>
+                <td>{{pickSheet.shipmentNumber}}</td>
+                <td>{{pickSheet.pickSheetDate}}</td>
+                <td>{{pickSheet.deliveryDate}}</td>
+                <td>{{pickSheet.routeID}}</td>
+                <td>{{pickSheet.bay}}</td>
+                <td>{{pickSheet.bin}}</td>
+                <td>{{pickSheet.quantity}}</td>
+                <td>
+                    <button (click) = "updatePickSheet(pickSheet.pickSheetID)" type="button" class="btn btn-outline-primary me-2">Edit</button>
+                    <button (click) = "deletePickSheet(pickSheet.pickSheetID)" type="button" class="btn btn-outline-danger">Delete</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
